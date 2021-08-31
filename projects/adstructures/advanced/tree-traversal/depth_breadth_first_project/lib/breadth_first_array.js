@@ -6,12 +6,12 @@ class TreeNode {
   }
 }
 
-let a = new TreeNode('a');
-let b = new TreeNode('b');
-let c = new TreeNode('c');
-let d = new TreeNode('d');
-let e = new TreeNode('e');
-let f = new TreeNode('f');
+let a = new TreeNode("a");
+let b = new TreeNode("b");
+let c = new TreeNode("c");
+let d = new TreeNode("d");
+let e = new TreeNode("e");
+let f = new TreeNode("f");
 
 a.left = b;
 a.right = c;
@@ -22,21 +22,21 @@ c.right = f;
 function breadthFirstArray(root) {
   if (!root) return null;
 
-  let queue = [ root ]
-  let res = []
+  let queue = [root];
+  let res = [];
   while (queue.length) {
     let node = queue.shift();
     res.push(node.val);
 
     if (node.left) queue.push(node.left);
-    if (node.right) queue.push(node.right)
+    if (node.right) queue.push(node.right);
   }
 
-  return res
+  return res;
 }
 
-console.log(breadthFirstArray(a))
+console.log(breadthFirstArray(a));
 
 module.exports = {
-    breadthFirstArray
+  breadthFirstArray,
 };

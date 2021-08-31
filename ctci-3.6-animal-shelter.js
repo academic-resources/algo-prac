@@ -10,41 +10,41 @@
 // We keep an ID to denote the oldest animal and create separate arrays to enqueue and dequeue.
 
 class AnimalShelter {
-    constructor ( capacity ) {
-        this._dogs = [];
-        this._cats = [];
-        this._id = 0;
+  constructor(capacity) {
+    this._dogs = [];
+    this._cats = [];
+    this._id = 0;
+  }
+
+  enqueue(type) {
+    if (!type) {
+      return "Please specify type of animal";
     }
 
-    enqueue ( type ) {
-        if ( !type ) {
-            return "Please specify type of animal";
-        }
-
-        if ( type === "dog" ) {
-            this._dogs.push( this._id );
-        } else if ( type === "cat" ) {
-            this._cats.push( this._id );
-        }
-        this._id++;
-        return this._id - 1;
+    if (type === "dog") {
+      this._dogs.push(this._id);
+    } else if (type === "cat") {
+      this._cats.push(this._id);
     }
+    this._id++;
+    return this._id - 1;
+  }
 
-    dequeueAny () {
-        let lastDog = this._dogs[ this._dogs.length - 1 ];
-        let lastCat = this._cats[ this._cats.length - 1 ];
+  dequeueAny() {
+    let lastDog = this._dogs[this._dogs.length - 1];
+    let lastCat = this._cats[this._cats.length - 1];
 
-        if ( lastDog > lastCat ) {
-            return lastDog.pop();
-        }
-        return lastCat.pop();
+    if (lastDog > lastCat) {
+      return lastDog.pop();
     }
+    return lastCat.pop();
+  }
 
-    dequeueDog () {
-        return this._dogs.pop();
-    }
+  dequeueDog() {
+    return this._dogs.pop();
+  }
 
-    dequeueCat () {
-        return this._cats.pop();
-    }
+  dequeueCat() {
+    return this._cats.pop();
+  }
 }

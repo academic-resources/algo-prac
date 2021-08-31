@@ -11,91 +11,91 @@
 // into input stack.
 
 class Stack {
-    constructor ( capacity ) {
-        this._capacity = capacity || Infinity;
-        this._storage = {};
-        this._count = 0;
+  constructor(capacity) {
+    this._capacity = capacity || Infinity;
+    this._storage = {};
+    this._count = 0;
+  }
+
+  sort() {
+    var tempStack = new Stack();
+
+    while (!this.isEmpty()) {
+      //pop out the first element
+      let top = this.pop();
+
+      //as long as elements of tempStack > top element of current stack, we need to move all elements from tempStack into original stack
+      while (!tempStack.isEmpty() && tempStack.peek() > top) {
+        //pop next element to compare to current elements in tempStack
+        this.push(tempStack.pop());
+      }
+
+      //move this into temp stack
+      tempStack.push(top);
     }
 
-    sort () {
-        var tempStack = new Stack();
+    //Right now tempStack is sorted in ascending order, we need to
+    //pop everything back into input stack in order so that smallest elements are on top
+    while (!tempStack.isEmpty()) {
+      this.push(tempStack.pop());
+    }
+  }
 
-        while ( !this.isEmpty() ) {
-            //pop out the first element
-            let top = this.pop();
+  push(element) {
+    //console.log(this._count);
+    if (this._count < this._capacity) {
+      this._storage[this._count++] = element;
+    } else {
+      return "Capacity is full.";
+    }
+  }
 
-            //as long as elements of tempStack > top element of current stack, we need to move all elements from tempStack into original stack
-            while ( !tempStack.isEmpty() && tempStack.peek() > top ) {
-                //pop next element to compare to current elements in tempStack
-                this.push( tempStack.pop() );
-            }
-
-            //move this into temp stack
-            tempStack.push( top );
-        }
-
-        //Right now tempStack is sorted in ascending order, we need to
-        //pop everything back into input stack in order so that smallest elements are on top
-        while ( !tempStack.isEmpty() ) {
-            this.push( tempStack.pop() );
-        }
+  pop() {
+    if (this._count === 0) {
+      return "Stack is empty.";
+    }
+    let top = this._storage[this._count - 1];
+    delete this._storage[this._count - 1];
+    this._count--;
+    if (this._count < 0) {
+      this._count = 0;
     }
 
-    push ( element ) {
-        //console.log(this._count);
-        if ( this._count < this._capacity ) {
-            this._storage[ this._count++ ] = element;
-        } else {
-            return "Capacity is full.";
-        }
-    }
+    return top;
+  }
 
-    pop () {
-        if ( this._count === 0 ) {
-            return "Stack is empty.";
-        }
-        let top = this._storage[ this._count - 1 ];
-        delete this._storage[ this._count - 1 ];
-        this._count--;
-        if ( this._count < 0 ) {
-            this._count = 0;
-        }
+  peek() {
+    return this._storage[this._count - 1];
+  }
 
-        return top;
-    }
+  count() {
+    return this._count;
+  }
 
-    peek () {
-        return this._storage[ this._count - 1 ];
-    }
+  isEmpty() {
+    //console.log(this);
+    return Object.keys(this._storage).length === 0;
+  }
 
-    count () {
-        return this._count;
+  print() {
+    let stack = "";
+    for (let key in this._storage) {
+      stack += " " + this._storage[key];
     }
-
-    isEmpty () {
-        //console.log(this);
-        return Object.keys( this._storage ).length === 0;
-    }
-
-    print () {
-        let stack = "";
-        for ( let key in this._storage ) {
-            stack += " " + this._storage[ key ];
-        }
-        console.log( stack );
-    }
+    console.log(stack);
+  }
 }
 
 let input = new Stack();
-input.push( 34 );
-input.push( 3 );
-input.push( 31 );
-input.push( 98 );
-input.push( 92 );
-input.push( 23 );
-console.log( "original" );
+input.push(34);
+input.push(3);
+input.push(31);
+input.push(98);
+input.push(92);
+input.push(23);
+console.log("original");
 input.print();
-console.log( "=======" );
+console.log("=======");
 input.sort();
-console.log( "=======" );
+console.log("=======");
 input.print();

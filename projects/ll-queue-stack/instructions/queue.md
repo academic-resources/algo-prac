@@ -9,9 +9,9 @@ Keep making the top-most test pass until all tests pass.
 
 ## Instructions
 
-* `cd` into the project folder
-* `npm install` to install dependencies in the project root directory
-* `npm test` to run the specs
-* You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
   the `/lib/queue.js` that implements the `Node` and `Queue` classes
   to make the tests pass.

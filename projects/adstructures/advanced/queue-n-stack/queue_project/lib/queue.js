@@ -12,7 +12,7 @@
 // Constraints:
 // ------------
 //
-// Make sure the time and space complexity of each is equivalent to those 
+// Make sure the time and space complexity of each is equivalent to those
 // in the table provided in the Time and Space Complexity Analysis section
 // of your Stack reading!
 //
@@ -20,12 +20,11 @@
 // Let's Code!
 // -----------
 
-class Node {  
+class Node {
   constructor(val) {
     this.value = val;
     this.next = null;
   }
-
 }
 
 class Queue {
@@ -47,7 +46,6 @@ class Queue {
     }
 
     return ++this.length;
-    
   }
 
   dequeue() {
@@ -65,7 +63,7 @@ class Queue {
   }
 
   size() {
-    if (this.length <= 0) return 0
+    if (this.length <= 0) return 0;
     return this.length;
   }
 }

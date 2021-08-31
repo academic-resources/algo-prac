@@ -1,11 +1,7 @@
 function inOrderArray(root) {
   if (!root) return [];
 
-  return [
-    ... inOrderArray(root.left),
-    root.val,
-    ... inOrderArray(root.right)
-  ]
+  return [...inOrderArray(root.left), root.val, ...inOrderArray(root.right)];
 }
 
 function postOrderArray(root) {
@@ -14,12 +10,11 @@ function postOrderArray(root) {
   return [
     ...postOrderArray(root.left),
     ...postOrderArray(root.right),
-    root.val
-  ]
+    root.val,
+  ];
 }
 
-
 module.exports = {
-    inOrderArray,
-    postOrderArray
+  inOrderArray,
+  postOrderArray,
 };
