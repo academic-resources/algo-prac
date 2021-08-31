@@ -4,24 +4,6 @@ JavaScript Algorithmic Interview Questions And Considerations
 Order the common complexity classes according to their growth rate
 ------------------------------------------------------------------
 
-[
-
-![Bryan Guner](https://miro.medium.com/fit/c/25/25/1*4fzEKCI8uJO85RqLCiNWLw.png)
-
-](https://bryanguner.medium.com/?source=post_page-----e4e401bbc635--------------------------------)
-
-[
-
-Bryan Guner
-
-](https://bryanguner.medium.com/?source=post_page-----e4e401bbc635--------------------------------)
-
-[
-
-Just now-14 min read
-
-](https://bryanguner.medium.com/javascript-algorithmic-interview-questions-and-considerations-e4e401bbc635?source=post_page-----e4e401bbc635--------------------------------)
-
 ![](https://miro.medium.com/max/1750/0*RRUd6pLQXaM0XC3E.png)
 
 Videos
