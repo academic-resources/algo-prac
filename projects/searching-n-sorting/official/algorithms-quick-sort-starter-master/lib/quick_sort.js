@@ -10,28 +10,27 @@
 // call quick sort on right and assign the return value to rightSorted
 
 // return the concatenation of leftSorted, the pivot value, and rightSorted
-function quickSort( array ) {
-  if ( array.length <= 1 ) {
+function quickSort(array) {
+  if (array.length <= 1) {
     return array;
   }
-  let pivot = array[ 0 ];
+  let pivot = array[0];
   array.shift();
   let left = [];
   let right = [];
-  for ( let i = 0; i < array.length; i++ ) {
-    if ( array[ i ] < pivot ) {
-      left.push( array[ i ] );
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < pivot) {
+      left.push(array[i]);
     } else {
-      right.push( array[ i ] );
+      right.push(array[i]);
     }
   }
-  let leftSorted = quickSort( left );
-  let rightSorted = quickSort( right );
-  return [ ...leftSorted, pivot, ...rightSorted ];
+  let leftSorted = quickSort(left);
+  let rightSorted = quickSort(right);
+  return [...leftSorted, pivot, ...rightSorted];
   //return [ leftSorted, pivot, rightSorted ].flat();
 }
 
-
 module.exports = {
-  quickSort
+  quickSort,
 };

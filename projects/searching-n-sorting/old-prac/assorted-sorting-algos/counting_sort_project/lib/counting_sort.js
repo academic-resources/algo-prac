@@ -11,14 +11,13 @@ function countingSort(arr, max) {
   for (i = 0; i < counters.length; i++) {
     while (counters[i] > 0) {
       result.push(i);
-      counters[i]--
+      counters[i]--;
     }
   }
 
-  return result
+  return result;
 }
 
-
 module.exports = {
-    countingSort
+  countingSort,
 };

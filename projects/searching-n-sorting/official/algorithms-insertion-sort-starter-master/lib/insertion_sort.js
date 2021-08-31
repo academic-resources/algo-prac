@@ -15,19 +15,18 @@
 //   list[holePosition] = valueToInsert
 
 // end for
-function insertionSort( list ) {
-  for ( let i = 1; i < list.length; i++ ) {
-    let val = list[ i ];
+function insertionSort(list) {
+  for (let i = 1; i < list.length; i++) {
+    let val = list[i];
     let pos = i;
-    while ( pos > 0 && list[ pos - 1 ] > val ) {
-      list[ pos ] = list[ pos - 1 ];
+    while (pos > 0 && list[pos - 1] > val) {
+      list[pos] = list[pos - 1];
       pos -= 1;
-
     }
-    list[ pos ] = val;
+    list[pos] = val;
   }
 }
 //Online algorithms are great when you're dealing with streaming data, because they can sort the data live as it is received.
 module.exports = {
-  insertionSort
+  insertionSort,
 };

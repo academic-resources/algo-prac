@@ -1,24 +1,24 @@
-import {expect} from 'chai';
-import {selectionSort, swap} from '../problems/02-selection-sort';
+import { expect } from "chai";
+import { selectionSort, swap } from "../problems/02-selection-sort";
 
-describe('swap()', () => {
+describe("swap()", () => {
   // it should accept an array and two indices as args
 
-  it('should swap the elements at the given indices, mutating the original array', () => {
-    let array1 = ['a', 'b', 'c'];
+  it("should swap the elements at the given indices, mutating the original array", () => {
+    let array1 = ["a", "b", "c"];
     swap(array1, 0, 2);
-    expect(array1).to.eql(['c', 'b', 'a']);
+    expect(array1).to.eql(["c", "b", "a"]);
 
-    let array2 = ['a', 'b', 'c'];
+    let array2 = ["a", "b", "c"];
     swap(array2, 1, 0);
-    expect(array2).to.eql(['b', 'a', 'c']);
+    expect(array2).to.eql(["b", "a", "c"]);
   });
 });
 
-describe('selectionSort()', () => {
+describe("selectionSort()", () => {
   // it should accept an array of numbers as an arg
 
-  it('should sort the elements of the array in increasing order, in-place', () => {
+  it("should sort the elements of the array in increasing order, in-place", () => {
     let array = [2, -1, 4, 3, 7, 3];
     selectionSort(array);
     expect(array).to.eql([-1, 2, 3, 3, 4, 7]);

@@ -54,8 +54,8 @@ procedure merge( a as array, b as array )
 end procedure
 ```
 
-* `cd` into the project folder
-* `npm install` to install dependencies in the project root directory
-* `npm test` to run the specs
-* You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
   the `/lib/merge_sort.js` that implements the Merge Sort.

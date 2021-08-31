@@ -30,25 +30,24 @@
 
 // return merge( l1, l2 )
 // return result
-function merge( array1, array2 ) {
+function merge(array1, array2) {
   const newArr = [];
-  while ( array1.length && array2.length ) {
-    if ( array1[ 0 ] > array2[ 0 ] ) {
-      newArr.push( array2[ 0 ] );
-      array2.shift()
+  while (array1.length && array2.length) {
+    if (array1[0] > array2[0]) {
+      newArr.push(array2[0]);
+      array2.shift();
     } else {
-      newArr.push( array1[ 0 ] );
-      array1.shift()
+      newArr.push(array1[0]);
+      array1.shift();
     }
-
   }
-  while ( array1.length ) {
-    newArr.push( array1[ 0 ] );
-    array1.shift()
+  while (array1.length) {
+    newArr.push(array1[0]);
+    array1.shift();
   }
-  while ( array2.length ) {
-    newArr.push( array2[ 0 ] );
-    array2.shift()
+  while (array2.length) {
+    newArr.push(array2[0]);
+    array2.shift();
   }
   return newArr;
 }
@@ -63,20 +62,20 @@ function merge( array1, array2 ) {
 
 // return merge( l1, l2 )
 
-function mergeSort( array ) {
-  if ( array.length <= 1 ) return array;
+function mergeSort(array) {
+  if (array.length <= 1) return array;
 
-  const mid = Math.floor( array.length / 2 ); // 0
-  let first = array.slice( 0, mid ); // slice(0,0) => []
-  let last = array.slice( mid );
+  const mid = Math.floor(array.length / 2); // 0
+  let first = array.slice(0, mid); // slice(0,0) => []
+  let last = array.slice(mid);
 
-  let firstSort = mergeSort( first );
-  let lastSort = mergeSort( last );
+  let firstSort = mergeSort(first);
+  let lastSort = mergeSort(last);
 
-  return merge( firstSort, lastSort )
+  return merge(firstSort, lastSort);
 }
 
 module.exports = {
   merge,
-  mergeSort
+  mergeSort,
 };

@@ -10,5 +10,5 @@ function mergeSort(array) {
 
 export default {
   merge,
-  mergeSort
+  mergeSort,
 };

@@ -12,5 +12,5 @@ function bubbleSort(array) {
 
 export default {
   bubbleSort,
-  swap
+  swap,
 };

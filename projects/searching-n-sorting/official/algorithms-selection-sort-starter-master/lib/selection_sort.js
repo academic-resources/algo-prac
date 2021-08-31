@@ -21,19 +21,19 @@
 //    end if
 // end for
 
-function swap( arr, index1, index2 ) {
-  let temp = arr[ index1 ];
-  arr[ index1 ] = arr[ index2 ];
-  arr[ index2 ] = temp;
+function swap(arr, index1, index2) {
+  let temp = arr[index1];
+  arr[index1] = arr[index2];
+  arr[index2] = temp;
 }
 
-function selectionSort( list ) {
+function selectionSort(list) {
   let length = list.length;
-  for ( let i = 0; i < length - 1; i++ ) {
+  for (let i = 0; i < length - 1; i++) {
     let minPos = i;
 
     for (let j = i + 1; j < length; j++) {
-      if (list[j]  < list[minPos]) {
+      if (list[j] < list[minPos]) {
         minPos = j;
       }
     }
@@ -41,12 +41,10 @@ function selectionSort( list ) {
     if (minPos !== i) {
       swap(list, minPos, i);
     }
-
   }
-
 }
 
 module.exports = {
   selectionSort,
-  swap
+  swap,
 };

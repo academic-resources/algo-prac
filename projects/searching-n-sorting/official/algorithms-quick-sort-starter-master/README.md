@@ -21,8 +21,8 @@ procedure quick sort (array)
 end procedure quick sort
 ```
 
-* `cd` into the project folder
-* `npm install` to install dependencies in the project root directory
-* `npm test` to run the specs
-* You can view the test cases in `/test/test.js`. Your job is to write code in
+- `cd` into the project folder
+- `npm install` to install dependencies in the project root directory
+- `npm test` to run the specs
+- You can view the test cases in `/test/test.js`. Your job is to write code in
   the `/lib/quick_sort.js` that implements the Quick Sort.

@@ -11,5 +11,5 @@ function selectionSort(list) {
 
 export default {
   selectionSort,
-  swap
+  swap,
 };

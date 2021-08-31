@@ -29,9 +29,7 @@
 //   and the target
 
 // if neither of those is true, return true
-function binarySearch( list, target ) {
-
-}
+function binarySearch(list, target) {}
 
 // parameter list: a list of sorted value
 // parameter target: the value to search for
@@ -60,10 +58,9 @@ function binarySearch( list, target ) {
 //   the binary search of the array, the target,
 //   the slice point plus one, and high
 // if neither of those is true, return the slice point
-function binarySearchIndex( list, target, low, high ) {}
-
+function binarySearchIndex(list, target, low, high) {}
 
 module.exports = {
   binarySearch,
-  binarySearchIndex
+  binarySearchIndex,
 };

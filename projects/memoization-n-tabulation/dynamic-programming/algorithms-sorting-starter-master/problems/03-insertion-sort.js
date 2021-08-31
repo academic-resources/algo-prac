@@ -5,5 +5,5 @@ function insertionSort(list) {
 }
 
 export default {
-  insertionSort
+  insertionSort,
 };

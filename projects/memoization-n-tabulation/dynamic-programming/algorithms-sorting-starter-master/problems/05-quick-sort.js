@@ -4,7 +4,6 @@ function quickSort(array) {
   // your code here
 }
 
-
 export default {
-  quickSort
+  quickSort,
 };
